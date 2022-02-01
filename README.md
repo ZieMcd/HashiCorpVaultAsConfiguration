@@ -1,5 +1,5 @@
 # HashiCorpAsConfiguration
-HashiCorpAsConfiguration is a Custom [configuration provider](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration#configuration-providers) for asp.net projects. It adds your hashcorp vault secrets to dotnet's [Configuration](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration) and can be used in your projects . It is build with vault sharp.
+HashiCorpAsConfiguration is a Custom [configuration provider](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration#configuration-providers) for asp.net projects. It adds your hashcorp vault secrets to dotnet's [Configuration](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration) and can be used in your projects. It is build on top of vault sharp.
 
 ## Intallation 
 PMC:
@@ -10,7 +10,7 @@ PMC:
     dotnet add package iemcd.Configuration.HashiCorpAsConfiguration
 
 ## Usage
-Setting up Vault configuration is pretty easy set up. 
+Setting up Vault configuration is a pretty easy set up. 
 1. All you need to do is add it in program.cs like so.
 
        builder.Configuration.AddVaultConfiguration(new VaultConfigSettings
@@ -21,7 +21,7 @@ Setting up Vault configuration is pretty easy set up.
           MountPoint = "Your mount point",
           Path = "Path to your secrets"
        });
-2. Now that Vault is configured all your secrets will be part of Configuration and can be injected else where in your project
+2. Now that Vault is configured all your secrets will be part of Configuration and can be injected else where in your project.
 
        private readonly IConfiguration _config;
 
@@ -29,7 +29,7 @@ Setting up Vault configuration is pretty easy set up.
        {
            _config = config;
        }
-3. Now that IConfiguration injected you can use it 
+3. Now that IConfiguration is injected you can get your secrets.
 
        public string GetSecret(string secret)
        {
