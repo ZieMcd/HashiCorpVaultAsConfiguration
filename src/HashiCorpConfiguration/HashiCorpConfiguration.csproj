@@ -4,6 +4,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <PackageId>Ziemcd.Configuration.HashiCorpAsConfiguration</PackageId>
+    <Title>HashiCorpAsConfiguration</Title>
+    <Authors>Zie/Izak McDowell</Authors>
+    <Description>HashiCorpAsConfiguration is a Custom configuration provider for asp.net projects. It adds your hashcorp vault secrets to dotnet's Configuration and can be used in your projects.It is build with vault sharp.</Description>
+    <Copyright>GPL</Copyright>
+    <PackageProjectUrl>https://github.com/ZieMcd/HashiCorpVaultAsConfiguration</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ZieMcd/HashiCorpVaultAsConfiguration</RepositoryUrl>
+    <PackageTags>HashiCorpVault, Configuration</PackageTags>
+    <PackageVersion>1.0.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>

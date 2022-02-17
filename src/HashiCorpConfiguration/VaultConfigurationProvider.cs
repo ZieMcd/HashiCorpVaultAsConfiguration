@@ -15,20 +15,20 @@ public class VaultConfigurationProvider : ConfigurationProvider
         _vaultConfigSettings = vaultConfigSettings;
     }
 
-    public override async void Load()
+    public override void Load()
     {
-        Data = await GetDataFromVault();
+        Data =  GetDataFromVault();
     }
 
-    private async Task<IDictionary<string, string>> GetDataFromVault()
+    private  IDictionary<string, string> GetDataFromVault()
     {
         try
         {
             IAuthMethodInfo authMethod = new TokenAuthMethodInfo(_vaultConfigSettings.Token);
             var vaultClientSettings = new VaultClientSettings(_vaultConfigSettings.ServerUriWithPort, authMethod);
             var vaultClient = new VaultClient(vaultClientSettings);
-            var secrets = await vaultClient.V1.Secrets.KeyValue.V2.ReadSecretAsync(path: _vaultConfigSettings.Path,
-                mountPoint: _vaultConfigSettings.MountPoint);
+            var secrets = vaultClient.V1.Secrets.KeyValue.V2.ReadSecretAsync(path: _vaultConfigSettings.Path,
+                mountPoint: _vaultConfigSettings.MountPoint).Result;
 
             return secrets.Data.Data.ToDictionary(k => k.Key, v => v.Value.ToString());
         }
