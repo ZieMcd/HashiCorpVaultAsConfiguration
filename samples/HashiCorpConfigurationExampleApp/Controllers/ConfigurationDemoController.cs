@@ -25,6 +25,6 @@ public class ConfigurationDemoController : ControllerBase
     [HttpGet]
     public string GetSecret(string secret)
     {
-        return _config["A secret you have in vault"];
+        return _config["secret-from-vault"];
     }
 }
