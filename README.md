@@ -18,6 +18,7 @@ Setting up Vault configuration is a pretty easy set up.
           //Set up your vault settings here
           Token = "Your Token",
           ServerUriWithPort = "Your port",
+          //MountPoint can be null
           MountPoint = "Your mount point",
           Path = "Path to your secrets"
        });
