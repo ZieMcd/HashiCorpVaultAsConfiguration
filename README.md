@@ -1,5 +1,5 @@
 # HashiCorpAsConfiguration
-HashiCorpAsConfiguration is a Custom [configuration provider](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration#configuration-providers) for asp.net projects. It adds your hashcorp vault secrets to dotnet's [Configuration](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration) and can be used in your projects. It is build on top of vault sharp.
+HashiCorpAsConfiguration is a Custom [configuration provider](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration#configuration-providers) for asp.net projects. It adds your hashcorp vault secrets to dotnet's [Configuration](https://docs.microsoft.com/en-us/dotnet/core/extensions/configuration) and can be used in your projects. It is built on top of vault sharp.
 
 ## Intallation 
 PMC:
