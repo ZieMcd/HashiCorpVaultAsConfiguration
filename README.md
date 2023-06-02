@@ -7,7 +7,7 @@ PMC:
     Install-Package Ziemcd.Configuration.HashiCorpAsConfiguration
 .NET CLI:
 
-    dotnet add package iemcd.Configuration.HashiCorpAsConfiguration
+    dotnet add package Ziemcd.Configuration.HashiCorpAsConfiguration
 
 ## Usage
 Setting up Vault configuration is a pretty easy set up. 
